@@ -1,0 +1,16 @@
+.contenedorTitulo{
+    background-image: url(https://media.meer.com/attachments/49319d1f2192568285d62eecacfe806991e59cee/store/fill/1090/613/8a34ea8b6a83a846881e90dcfdcceb81cb7d65b7aed60a1f0bae1c45deba/La-Piedra-del-Penon-de-Guatape-al-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content:start;
+    align-items: flex-end;
+}
+
+.titulo{
+    font-size: 50px;
+    -webkit-text-fill-color: rgb(188, 223, 118);
+    -webkit-text-stroke: 1px black;
+}
