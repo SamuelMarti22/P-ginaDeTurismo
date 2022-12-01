@@ -13,10 +13,9 @@
 </head>
 
 <body class="bg-dark">
-    <!-- Hola -->
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Tours melos pa vos papaaaaaa</a>
+            <a class="navbar-brand" href="./index.html">Tours melos pa vos papaaaaaa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -46,7 +45,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="./registrarse.html">Registrarse</a></li>
+                                <li><a class="dropdown-item" href="#">Registrarse</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -54,50 +53,69 @@
             </div>
         </div>
     </nav>
-    <main>
-        <div class="contenedorTitulo">
-            <h1 class="titulo">Disfruta de Guatapé a través de nuestros Tours</h1>
-        </div>
-        <div class="carruselyTexto">
-            <div class="contenedorTexto">
-                <h2 class="texto">Las cosas simples de la vida son las que más se disfrutan, y eso te queremos ofrecer a
-                    travéz de nuestros tours por Guatapé. </h2>
-                <h2 class="texto">Con una simple van, un buen estilo y las mejores actitudes te damos las mejores
-                    experiencias a través de Guatapé, en las que podrás conocer lugares impresionantes y disfrutar junto
-                    a tu familia y amigos, con una que otra sorpresa en el camino</h2>
-                <h2 class="texto">Así pues, vamonos a viajar en una van y disfrutemos del camino <i
-                        class="fa-solid fa-van-shuttle"></i></h2>
-            </div>
-            <div class="contenedorCarrusel">
-                <div class="carrusel">
-                    <div class="elementoCarrusel">
-                        <img src="https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/amp_1200x900_4_3/public/node/article/field_image/stone-g5a6414f67_1280.jpg?itok=FiK02TGy"
-                            alt="">
-                    </div>
-                    <div class="elementoCarrusel">
-                        <img src="https://turismoantioquia.travel/wp-content/uploads/2021/09/BANNERS-MUNICIPIOS-GUATAPE.jpg"
-                            alt="">
-                    </div>
-                    <div class="elementoCarrusel">
-                        <img src="https://images.ctfassets.net/gkhyeghj07ak/5yvwF0zaqA5UdLJh4I0B8n/9271562ffedbef7b62faa2f2af0fd55d/comfama-guatape__1_.jpg"
-                            alt="">
-                    </div>
-                    <div class="elementoCarrusel">
-                        <img src="https://media.viajando.travel/p/ce9fc4e9e8139e37b0ede47be1cec46a/adjuntos/236/imagenes/000/496/0000496566/1200x0/smart/plazoleta-el-zocalo-guatape.png"
-                            alt="">
-                    </div>
-                    <div class="elementoCarrusel">
-                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/S7DKSRFT25GODIGCFKPR3CM4JI.jpg"
-                            alt="">
+    <main id="registro">
+        <!-- Formulario para validación de compra -->
+        <div class="formularioRegistro">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="col-md-4">
+                    <label for="validationCustom01" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" value="Mark" required>
+                    <div class="valid-feedback">
+                        Se ve bien!
                     </div>
                 </div>
-                <div role="tablist" class="dots"></div>
-            </div>
+                <div class="col-md-4">
+                    <label for="validationCustom02" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" value="Otto" required>
+                    <div class="valid-feedback">
+                        Se ve bien!
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="validationCustomUsername" class="form-label">Nombre de Usuario</label>
+                    <div class="input-group has-validation">
+                        <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        <input type="text" class="form-control" id="nombreUsuario"
+                            aria-describedby="inputGroupPrepend" required>
+                        <div class="invalid-feedback">
+                            Por favor ponga un nombre de usuario
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    <div class="invalid-feedback">
+                        Por favor poner un correo válido
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" required>
+                    <div class="invalid-feedback">
+                        Por favor ponga una contraseña válida (debe tener al menos 8 carácteres)
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                        <label class="form-check-label" for="invalidCheck">
+                            Estoy de acuerdo con términos y condiciones.
+                        </label>
+                        <div class="invalid-feedback">
+                            Debes de estar de acuerdo con los términos y condiciones antes de registrarte.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </form>
         </div>
     </main>
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <div class="col-md-4 d-flex align-items-center">
-            <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <a href="./index.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
                 <i class="fa-solid fa-van-shuttle"></i>
             </a>
             <span class="mb-3 mb-md-0 text-muted">©VanxColombia</span>
