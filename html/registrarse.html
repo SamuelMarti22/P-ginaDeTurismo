@@ -15,7 +15,7 @@
 <body class="bg-dark">
     <nav class="navbar navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="./index.html">Tours melos pa vos papaaaaaa</a>
+            <a class="navbar-brand" href="./index.html"><i class="fa-solid fa-van-shuttle"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -57,26 +57,30 @@
         <!-- Formulario registro -->
         <div class="formularioRegistro">
             <span class="form_title">Registrarse</span>
-            <form action="">
+            <form action="" id="formularioRegistrarse">
                 <div class="form_input">
                     <i class="fa-solid fa-user"></i>
                     <input type="text" placeholder="Nombre" id="nombre">
                     <span class="bar"></span>
+                    <div class="mensajeError nombre"><i class="fa-solid fa-circle-exclamation"></i>Por favor, llenar correctamente este campo</div>
                 </div>
                 <div class="form_input">
                     <i class="fa-solid fa-envelope"></i>
                     <input type="text" placeholder="Email" id="email">
                     <span class="bar"></span>
+                    <div class="mensajeError email"><i class="fa-solid fa-circle-exclamation"></i>Por favor, llenar correctamente este campo</div>
                 </div>
                 <div class="form_input">
                     <i class="fa-sharp fa-solid fa-lock"></i>
-                    <input type="text" placeholder="Contraseña" id="contraseña">
+                    <input type="password" placeholder="Contraseña" id="contraseña">
                     <span class="bar"></span>
+                    <div class="mensajeError contraseña"><i class="fa-solid fa-circle-exclamation"></i>La contraseña debe tener 4-20 carácteres, y mínimo 1 cáracter especial</div>
                 </div>
                 <div class="form_input">
                     <i class="fa-sharp fa-solid fa-lock"></i>
-                    <input type="text" placeholder="Confirmar contraseña" id="contraseña2">
+                    <input type="password" placeholder="Confirmar contraseña" id="contraseña2">
                     <span class="bar"></span>
+                    <div class="mensajeError contraseña2"><i class="fa-solid fa-circle-exclamation"></i>Ambas contraseñas deben ser las mismas</div>
                 </div>
                 <button type="submit" class="form_button">Registrarse</button>
                 <span class="form_switch">Ya tienes una cuenta? <a href="./inicioSesion.html">Inicia sesión</a></span>
