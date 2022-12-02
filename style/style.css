@@ -13,7 +13,7 @@ footer{
 .titulo{
     margin: 20px;
     font-size: 50px;
-    -webkit-text-fill-color: rgb(188, 223, 118);
+    -webkit-text-fill-color: #FED049;
     -webkit-text-stroke: 1px black;
 }
 
@@ -55,18 +55,144 @@ footer{
 
 /* Formulario de inicio de sesión */
 
-.formularioRegistro{
-    margin: 100px;
-    padding: 5px;
-    width:40%;
-    height:auto;
-}
-
 #registro{
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items:center;
     color: #ccc;
+    font-family: 'Poppins', sans-serif;
 }
 
+
+.formularioRegistro{
+    position: relative;
+    margin: 100px;
+    padding: 10rem 0;
+    max-width:40rem;
+    height:auto;
+    isolation: isolate;
+    color: black;
+    background-color:#fff;
+    border-radius: 1rem;
+    box-shadow: 0 1px 1rem rgba(0, 0, 0, .1);
+}
+
+.formularioRegistro::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background: linear-gradient(to right, #FFD89B, #133e5a);
+    border-radius: 1rem 1rem 100% 100%;
+    z-index: -1;
+}
+
+.form_title{
+    position: absolute;
+    top: 3.5rem;
+    left: 50%;
+    transform:translateX(-50%);
+    font-size: 2.5rem;
+}
+
+.formularioRegistro>form{
+    padding: 2.5rem;
+    background-color: inherit;
+}
+
+.form_input{
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 0 auto;
+}
+
+.form_input>i{
+    font-size:2rem;
+    margin-right: 1rem;
+    color: #133e5a;
+}
+
+.form_input input{
+    position: relative;
+    width: 100%;
+    font: inherit;
+    padding: 1rem 0;
+    margin-top: .5rem;
+    border: none;
+    outline: none;
+}
+
+.form_input .bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    height:1px;
+}
+
+.form_input .bar::before{
+    content: "";
+    position: absolute;
+    background-color: #133e5a;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s;
+}
+
+.form_input>input:focus+.bar::before{
+    transform: scaleX(1);
+}
+
+.form_button{
+    display:block;
+    margin: 2.5rem auto 3rem;
+    padding: 1rem 5rem;
+    background: linear-gradient(to right, #FFD89B, #133e5a);
+    color: #fff;
+    font: inherit;
+    border:.5rem solid #fff;
+    outline: none;
+    cursor: pointer;
+    border-radius:3rem;
+}
+
+.form_button:hover{
+    background: linear-gradient(to left, #FFD89B, #133e5a)
+}
+
+.form_switch{
+    display:block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.form_switch a {
+    text-decoration:none;
+    color: #133e5a;
+}
+
+.form_switch a:hover{
+    text-decoration:none;
+}
+
+@media screen and (min-width: 43.75rem){
+    .formularioRegistro::before{
+        height: 30rem;
+    }
+    .form_title{
+        left: 10rem;
+    }
+    .formularioRegistro>form{
+        transform: translateX(10rem);
+        border-radius: inherit;
+        box-shadow:inherit;
+    }
+}
